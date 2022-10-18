@@ -14,11 +14,17 @@ fig, axs = plt.subplots(11, figsize = (10,15))
 plt1 = sns.boxplot(data['fixed acidity'], ax = axs[0])
 plt2 = sns.boxplot(data['volatile acidity'], ax = axs[1])
 plt3 = sns.boxplot(data['citric acid'], ax = axs[2])
+plt4 = sns.boxplot(data['residual sugar'], ax = axs[3])
+plt5 = sns.boxplot(data['chlorides'], ax = axs[4])
+plt6 = sns.boxplot(data['free sulfur dioxide'], ax = axs[5])
+plt7 = sns.boxplot(data['total sulfur dioxide'], ax = axs[6])
+plt8 = sns.boxplot(data['density'], ax = axs[7])
+plt9 = sns.boxplot(data['pH'], ax = axs[8])
+plt10 = sns.boxplot(data['sulphates'], ax = axs[9])
+plt11 = sns.boxplot(data['alcohol'], ax = axs[10])
 plt.tight_layout()
 
-st.write(plt1)
-st.write(plt2)
-st.write(plt3)
+st.pyplot(fig)
 
 
 
