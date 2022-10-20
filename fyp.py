@@ -32,12 +32,6 @@ bar = sns.countplot(x = data1['quality']).set(title = 'Frequency Chart',
                                        xlabel = 'Wine Quality', 
                                        ylabel = 'Frequency');
 
-st.pyplot(bar)
-
-sns.heatmap(data1.corr(), annot = True)
-plt.gcf().set_size_inches(15, 8)
-plt.show()
-
 
 
 
