@@ -10,7 +10,7 @@ st.write(data.sample(5))
 st.write(data.describe())
 st.write(data.info())
 
-fig, axs = plt.subplots(11, figsize = (10,15))
+fig, axs = plt.subplots(11, figsize = (10,25))
 plt1 = sns.boxplot(data['fixed acidity'], ax = axs[0])
 plt2 = sns.boxplot(data['volatile acidity'], ax = axs[1])
 plt3 = sns.boxplot(data['citric acid'], ax = axs[2])
@@ -25,6 +25,16 @@ plt11 = sns.boxplot(data['alcohol'], ax = axs[10])
 plt.tight_layout()
 
 st.pyplot(fig)
+
+data1 = data.drop_duplicates()
+
+bar = sns.countplot(x = data1['quality']).set(title = 'Frequency Chart', 
+                                       xlabel = 'Wine Quality', 
+                                       ylabel = 'Frequency');
+
+sns.heatmap(data1.corr(), annot = True)
+plt.gcf().set_size_inches(15, 8)
+plt.show()
 
 
 
